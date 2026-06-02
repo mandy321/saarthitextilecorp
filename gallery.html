@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Saarthi Textile Corp | Products & Manufacturing Process</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 20 15 Q 20 10 25 10 Q 35 10 35 20 Q 35 28 20 32 Q 50 35 50 45 Q 50 55 40 60 Q 25 60 20 65" stroke="#C9A961" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="60" y1="10" x2="60" y2="60" stroke="#C9A961" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="60" cy="12" r="3" fill="#C9A961"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>Saarthi</h1>
+                    <p>Textile Corp</p>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item theme-toggle-item">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+                    <label for="theme-toggle" class="theme-toggle-label" title="Toggle dark mode">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </label>
+                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link cta-btn">Back to Home</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Product Gallery & Manufacturing</h1>
+            <p>Explore our premium textile products and world-class manufacturing process</p>
+        </div>
+    </section>
+
+    <!-- Manufacturing Process Section -->
+    <section class="manufacturing-section">
+        <div class="container">
+            <h2 class="section-title">Our Manufacturing Process</h2>
+            <p class="section-subtitle">Excellence in every step of production</p>
+
+            <div class="process-grid">
+                <div class="process-card fade-in">
+                    <div class="process-number">01</div>
+                    <div class="process-image" style="background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);"></div>
+                    <h3>Raw Material Selection</h3>
+                    <p>We carefully source premium raw materials from trusted suppliers worldwide. Each batch undergoes rigorous quality testing to ensure excellence.</p>
+                </div>
+
+                <div class="process-card fade-in">
+                    <div class="process-number">02</div>
+                    <div class="process-image" style="background: linear-gradient(135deg, #6B5B4A 0%, #8B7355 100%);"></div>
+                    <h3>Advanced Processing</h3>
+                    <p>Using state-of-the-art machinery and proven techniques, we process raw materials into fine textile fibers with consistent quality standards.</p>
+                </div>
+
+                <div class="process-card fade-in">
+                    <div class="process-number">03</div>
+                    <div class="process-image" style="background: linear-gradient(135deg, #A0826D 0%, #C9A961 100%);"></div>
+                    <h3>Weaving & Dyeing</h3>
+                    <p>Our expert craftsmen weave and dye fabrics using traditional techniques combined with modern technology for superior results.</p>
+                </div>
+
+                <div class="process-card fade-in">
+                    <div class="process-number">04</div>
+                    <div class="process-image" style="background: linear-gradient(135deg, #C9A961 0%, #D4AF76 100%);"></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every product undergoes comprehensive testing including strength, durability, color fastness, and finish quality before shipping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery -->
+    <section class="products-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Product Collection</h2>
+            <p class="section-subtitle">Premium textiles for every industry</p>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="home">Home</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Tennis Ball Felt -->
+                <div class="gallery-item fade-in" data-category="sports">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #FFD700, #FFA500);">
+                        <div class="image-overlay">
+                            <button class="zoom-btn" onclick="openGalleryModal(0)">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Tennis Ball Felt</h3>
+                    <p class="product-specs">Professional Grade • Premium Quality • ISO Certified</p>
+                    <p class="product-desc">Premium felt designed for professional tennis balls with superior durability and consistent performance characteristics.</p>
+                </div>
+
+                <!-- Woolen Blankets -->
+                <div class="gallery-item fade-in" data-category="home">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #8B4513, #D2691E);">
+                        <div class="image-overlay">
+                            <button class="zoom-btn" onclick="openGalleryModal(1)">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Woolen Blankets</h3>
+                    <p class="product-specs">100% Pure Wool • Warm & Soft • Machine Washable</p>
+                    <p class="product-desc">Luxuriously soft woolen blankets perfect for comfort and elegance in any home environment.</p>
+                </div>
+
+                <!-- Tweed Fabric -->
+                <div class="gallery-item fade-in" data-category="fashion">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #6B4423, #A0826D);">
+                        <div class="image-overlay">
+                            <button class="zoom-btn" onclick="openGalleryModal(2)">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Tweed Fabric</h3>
+                    <p class="product-specs">Classic Design • Premium Weave • Versatile</p>
+                    <p class="product-desc">Classic and sophisticated tweed fabric suitable for premium clothing and upholstery applications.</p>
+                </div>
+
+                <!-- Endless Felt -->
+                <div class="gallery-item fade-in" data-category="fashion">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #C0C0C0, #808080);">
+                        <div class="image-overlay">
+                            <button class="zoom-btn" onclick="openGalleryModal(3)">View Details</button>
+                        </div>
+                    </div>
+                    <h3>Endless Felt</h3>
+                    <p class="product-specs">Versatile • Durable • Cost Effective</p>
+                    <p class="product-desc">Flexible and durable felt suitable for industrial and craft applications with consistent quality standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+            <div class="modal-image"></div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-specs" id="modalSpecs"></div>
+                <button class="btn btn-primary" onclick="closeGalleryModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Premium Textiles?</h2>
+            <p>Contact us today for samples, pricing, and bulk orders</p>
+            <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Saarthi Textile Corp. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

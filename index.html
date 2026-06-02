@@ -27,14 +27,32 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1>Saarthi Textile Corp</h1>
+                <svg class="logo-icon" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Stylized 'S' for Saarthi -->
+                    <path d="M 20 15 Q 20 10 25 10 Q 35 10 35 20 Q 35 28 20 32 Q 50 35 50 45 Q 50 55 40 60 Q 25 60 20 65" stroke="#C9A961" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Needle/Thread element -->
+                    <line x1="60" y1="10" x2="60" y2="60" stroke="#C9A961" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="60" cy="12" r="3" fill="#C9A961"/>
+                    <!-- Company text -->
+                </svg>
+                <div class="logo-text">
+                    <h1>Saarthi</h1>
+                    <p>Textile Corp</p>
+                </div>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item theme-toggle-item">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+                    <label for="theme-toggle" class="theme-toggle-label" title="Toggle dark mode">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </label>
+                </li>
                 <li class="nav-item"><a href="#" class="nav-link cta-btn" id="chat-toggle">Get in Touch</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -293,12 +311,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Saarthi Textile Corp. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2026 Saarthi Textile Corp. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/chatbot.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>
