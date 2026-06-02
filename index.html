@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthi Textile Corp - Premium Textile Products</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen with Tennis Ball Animation -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="tennis-ball-container">
+            <svg class="tennis-ball" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="#E8E744" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M 30 40 Q 50 20, 70 40" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+                <path d="M 30 60 Q 50 80, 70 60" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+            </svg>
+        </div>
+        <p class="loading-text">Saarthi Textile Corp</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Saarthi Textile Corp</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link cta-btn" id="chat-toggle">Get in Touch</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text fade-in-up">
+                <h2>Premium Textile Excellence</h2>
+                <p>Crafting quality fabrics for every need - from sports to home comfort</p>
+                <button class="btn btn-primary" id="explore-btn">Explore Our Products</button>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card card-1">Tennis Ball Felt</div>
+                    <div class="card card-2">Woolen Blankets</div>
+                    <div class="card card-3">Tweed Fabric</div>
+                    <div class="card card-4">Endless Felt</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Premium Products</h2>
+            <p class="section-subtitle">Exceptional quality textiles crafted for excellence</p>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);"></div>
+                    <h3>Tennis Ball Felt</h3>
+                    <p>Premium felt specifically designed for professional tennis balls. High durability and consistent performance.</p>
+                    <ul class="features">
+                        <li>✓ Professional grade</li>
+                        <li>✓ Superior durability</li>
+                        <li>✓ Consistent bounce</li>
+                    </ul>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in">
+                    <div class="product-image" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);"></div>
+                    <h3>Woolen Blankets</h3>
+                    <p>Luxuriously soft and warm woolen blankets perfect for comfort and elegance in every home.</p>
+                    <ul class="features">
+                        <li>✓ 100% pure wool</li>
+                        <li>✓ Premium comfort</li>
+                        <li>✓ Long-lasting warmth</li>
+                    </ul>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in">
+                    <div class="product-image" style="background: linear-gradient(135deg, #6B4423 0%, #A0826D 100%);"></div>
+                    <h3>Tweed Fabric</h3>
+                    <p>Classic and sophisticated tweed fabric for premium clothing and upholstery applications.</p>
+                    <ul class="features">
+                        <li>✓ Timeless design</li>
+                        <li>✓ High quality weave</li>
+                        <li>✓ Versatile use</li>
+                    </ul>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card fade-in">
+                    <div class="product-image" style="background: linear-gradient(135deg, #C0C0C0 0%, #808080 100%);"></div>
+                    <h3>Endless Felt</h3>
+                    <p>Durable and flexible felt for industrial and craft applications with consistent quality.</p>
+                    <ul class="features">
+                        <li>✓ Versatile applications</li>
+                        <li>✓ Excellent durability</li>
+                        <li>✓ Cost effective</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>About Saarthi Textile Corp</h2>
+                    <p>With decades of excellence in textile manufacturing, Saarthi Textile Corp has established itself as a trusted leader in premium fabric production. Our commitment to quality, innovation, and customer satisfaction sets us apart.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Quality Assured</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in-right">
+                    <div class="placeholder-box">
+                        <p>Premium Textile Manufacturing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Maps Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Visit Us or Get in Touch</h2>
+            
+            <div class="contact-wrapper">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.5523622897737!2d72.82958!3d19.07609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7a1a1a1a1a1%3A0x1a1a1a1a1a1a1a1a!2sTextile%20Manufacturing%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="450" style="border:none; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <h4>📍 Address</h4>
+                        <p>Mumbai, India</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p>+91 (0) XXXX XXX XXX</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📧 Email</h4>
+                        <p>info@saarthitextile.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>⏰ Business Hours</h4>
+                        <p>Monday - Friday: 9 AM - 6 PM<br>Saturday: 10 AM - 4 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot" class="chatbot-widget">
+        <div class="chatbot-header" id="chatbot-header">
+            <h4>Let's Connect!</h4>
+            <span class="close-btn" id="close-chatbot">✕</span>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <p>Hi there! 👋 Welcome to Saarthi Textile Corp. How can we help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-form">
+            <input type="text" id="user-name" placeholder="Your name" required>
+            <input type="email" id="user-email" placeholder="Your email" required>
+            <textarea id="user-message" placeholder="Tell us about your needs..." rows="3"></textarea>
+            <button class="btn btn-small" id="send-message">Send Message</button>
+        </div>
+    </div>
+
+    <div class="chatbot-toggle" id="chatbot-toggle">
+        <span>💬</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Saarthi Textile Corp. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
