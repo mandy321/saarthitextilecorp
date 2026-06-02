@@ -1,14 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-primary/20 p-4">
+    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-primary/20 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-primary">Saarthi Textile</Link>
-        <div className="space-x-4">
-          <Link to="/" className="hover:text-accent">Home</Link>
-          <Link to="/gallery" className="hover:text-accent">Gallery</Link>
+        <Link to="/" className="text-2xl font-bold text-primary dark:text-primary-200">
+          Saarthi Textile
+        </Link>
+        <div className="flex items-center gap-4">
+          <Link to="/" className="hover:text-accent dark:hover:text-accent-200">
+            Home
+          </Link>
+          <Link to="/gallery" className="hover:text-accent dark:hover:text-accent-200">
+            Gallery
+          </Link>
+          <ThemeToggle />
         </div>
       </div>
     </nav>

@@ -7,15 +7,17 @@ import { mockProducts } from '../mockProducts';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900">
       <Navbar />
       
       <HeroIntro />
       
       {/* Products Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-primary mb-12">Our Products</h2>
+          <h2 className="text-4xl font-bold text-center text-primary dark:text-primary-200 mb-12">
+            Our Products
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -25,17 +27,19 @@ const Index = () => {
       </section>
       
       {/* About Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-primary mb-8">About Saarthi Textile</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-primary dark:text-primary-200 mb-8">
+            About Saarthi Textile
+          </h2>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             With over 20 years of experience in the textile industry, Saarthi Textile Corp has established itself as a trusted name in premium fabric manufacturing. Our commitment to quality and innovation has made us a preferred partner for designers and manufacturers worldwide.
           </p>
         </div>
       </section>
       
       {/* Stats Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-primary dark:bg-gray-700 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
