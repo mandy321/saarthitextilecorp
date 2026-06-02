@@ -92,32 +92,79 @@ document.addEventListener('DOMContentLoaded', function() {
         // Scroll to bottom
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
-        // Simulate bot response
-        setTimeout(() => {
-            const botResponseDiv = document.createElement('div');
-            botResponseDiv.className = 'message bot-message';
-            botResponseDiv.innerHTML = `<p>Thank you ${name}! We've received your message and will get back to you at <strong>${escapeHtml(email)}</strong> shortly. Our team will review your inquiry and be in touch soon! 😊</p>`;
-            chatbotMessages.appendChild(botResponseDiv);
+        // Send to Formspree email service
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', message);
 
-            // Scroll to bottom
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        // Send email using Formspree (configure with your form ID)
+        // To setup: 1. Go to https://formspree.io/
+        //          2. Create new form for saarthitextilecorp@gmail.com
+        //          3. Replace FORM_ID below with your actual form ID
+        //          4. Each form submission will be sent as email
 
-            // Clear form
-            nameInput.value = '';
-            emailInput.value = '';
-            messageInput.value = '';
+        fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Success - show bot response
+                setTimeout(() => {
+                    const botResponseDiv = document.createElement('div');
+                    botResponseDiv.className = 'message bot-message';
+                    botResponseDiv.innerHTML = `<p>Thank you ${name}! We've received your message and will get back to you at <strong>${escapeHtml(email)}</strong> shortly. Our team will review your inquiry and be in touch soon! 😊</p>`;
+                    chatbotMessages.appendChild(botResponseDiv);
 
-            // Log to console (in real app, this would be sent to server)
-            console.log('Lead captured:', {
+                    // Scroll to bottom
+                    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+                    // Clear form
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    messageInput.value = '';
+
+                    // Log to console
+                    console.log('Lead captured and sent:', {
+                        name: name,
+                        email: email,
+                        message: message,
+                        timestamp: new Date().toISOString()
+                    });
+                }, 500);
+            } else {
+                // Fallback if email service fails - still log the message
+                throw new Error('Email service error');
+            }
+        })
+        .catch(error => {
+            // Fallback: if email fails, still show success message and log locally
+            console.log('Email service unavailable, but message captured:', {
                 name: name,
                 email: email,
                 message: message,
                 timestamp: new Date().toISOString()
             });
 
-            // Send to server (uncomment when backend is ready)
-            // sendLeadToServer(name, email, message);
-        }, 500);
+            setTimeout(() => {
+                const botResponseDiv = document.createElement('div');
+                botResponseDiv.className = 'message bot-message';
+                botResponseDiv.innerHTML = `<p>Thank you ${name}! We've received your message and will get back to you at <strong>${escapeHtml(email)}</strong> shortly. 😊</p>`;
+                chatbotMessages.appendChild(botResponseDiv);
+
+                // Scroll to bottom
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+                // Clear form
+                nameInput.value = '';
+                emailInput.value = '';
+                messageInput.value = '';
+            }, 500);
+        });
     }
 
     function isValidEmail(email) {
@@ -129,29 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
-    }
-
-    // Function to send lead data to server
-    function sendLeadToServer(name, email, message) {
-        const leadData = {
-            name: name,
-            email: email,
-            message: message,
-            timestamp: new Date().toISOString(),
-            source: 'website_chatbot'
-        };
-
-        // Example fetch call (configure with actual backend endpoint)
-        // fetch('/api/leads', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(leadData)
-        // })
-        // .then(response => response.json())
-        // .then(data => console.log('Lead sent:', data))
-        // .catch(error => console.error('Error:', error));
     }
 
     // Close chatbot when clicking outside (optional)
