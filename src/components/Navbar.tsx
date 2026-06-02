@@ -16,6 +16,12 @@ const Navbar = () => {
           <Link to="/gallery" className="hover:text-accent dark:hover:text-accent-200">
             Gallery
           </Link>
+          <Link
+            to="/manufacturing"
+            className="hover:text-accent dark:hover:text-accent-200"
+          >
+            Manufacturing
+          </Link>
           <ThemeToggle />
         </div>
       </div>
